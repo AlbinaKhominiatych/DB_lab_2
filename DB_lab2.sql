@@ -1,4 +1,6 @@
 --Завдання 2
---Показати мінімальну середню оцінку по всіх студентах.
-SELECT MIN(average_grade_per_year) AS Min_Average_Grade
+--Показати статистику міст. 
+--Має відображатися назва міста та кількість студентів з цього міста.
+SELECT city, COUNT (*) AS student_count
 FROM student_grades
+GROUP BY city
