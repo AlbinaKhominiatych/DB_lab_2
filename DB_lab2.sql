@@ -1,6 +1,5 @@
 --Завдання 1
---Показати інформацію про студентів з віком, у вказаному діапазоні.
---отримати вік студентів
-SELECT * 
+--Показати інформацію про студентів із конкретним ім’ям.
+SELECT *
 FROM student_grades
-WHERE EXTRACT(YEAR FROM AGE(current_date, date_of_birth)) BETWEEN 18 AND 24;
+WHERE LOWER(student_name) LIKE 'ali%'
