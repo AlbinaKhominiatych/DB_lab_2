@@ -1,6 +1,7 @@
---Завдання 2
---Показати статистику міст. 
---Має відображатися назва міста та кількість студентів з цього міста.
-SELECT city, COUNT (*) AS student_count
+--зАВДАННЯ 2
+--Показати кількість студентів з мінімальною середньою оцінкою з математики.
+SELECT COUNT (*) as count_min_math_avg
 FROM student_grades
-GROUP BY city
+WHERE average_grade_per_year = (SELECT MIN(average_grade_per_year)
+							   FROM student_grades
+							   WHERE min_subject_name = 'Mathematics')
