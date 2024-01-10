@@ -1,5 +1,5 @@
 --Завдання 1
---Показати інформацію про студентів із конкретним ім’ям.
-SELECT *
+--Показати електронні адреси студентів, що починаються з конкретної літери.
+SELECT email
 FROM student_grades
-WHERE LOWER(student_name) LIKE 'ali%'
+WHERE LOWER(SUBSTRING(email, 1, 1)) = 'a'
